@@ -1,0 +1,2 @@
+id,product_id,ptdvar_id,brand,purchase_type,status,prtd_location,in_service,vendor,sl_no,purchase_date,purchase_cost,expenses,rent_vendor,rent_purchase_date,rent_to_vendor_cost,bill_no,warranty_end_date,warranty_status,product_owned_type,month,year,close_status
+1219,ChennaiIC1017ICSSSAF168182219,28,2,1,0,0,0,9,1017,2018-08-16,5000.00,500.00,0,0000-00-00,0.00,5879456,2020-08-22,0,0,0,0,0

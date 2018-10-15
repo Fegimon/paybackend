@@ -1,0 +1,2 @@
+id,enquiry_id,customer_id,product_id,service_applied_date,issue_type,remarks,is_serviced,serviced_by,service_period,service_amount,from_date,to_date,is_waiver,waiver_from_date,waiver_to_date,customer_fd_back,is_paid,received_ammout,payment_mode,colected_on,colected_by,deposit_by,deposit_on
+15,,PR1237,ChennaiIC1017ICSSSAF168182219,2018-08-22,none,none,1,7,0,100.00,2018-08-22,2018-08-22,0,0000-00-00,0000-00-00,,0,0.00,cash,0000-00-00,3,,0000-00-00

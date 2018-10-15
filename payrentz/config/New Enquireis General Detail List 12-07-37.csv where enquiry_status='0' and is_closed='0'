@@ -1,0 +1,4 @@
+id,enquiry_id,customer_id,customer_status,enquiry_date,mode,referred_by,attended_by,assigned_to,followup_date,followup_remarks,enquiry_status,is_closed,closed_reason,is_terminate,terminate_reason,total_security_amount,total_processing_fee,t_installation_fee,total_other_fee,total_rent,total_amount,amount_received_from_customer,amount_pennding_from_customer,is_mapped,e_type
+1,ENQ000001,pr0023,0,2017-08-14,0,0,1,1,2017-08-14,asdert,1,0,,0,,11400.00,2500.00,0.00,0.00,0.00,13900.00,0.00,0.00,1,0
+2,ENQ000002,pr0056,0,2017-08-14,0,0,1,1,2017-08-14,asd,0,1,,0,,1800.00,500.00,0.00,0.00,0.00,2300.00,0.00,0.00,0,0
+3,ENQ000003,pr0056,0,2017-08-17,0,0,1,1,2017-08-17,pp,1,0,,0,,3600.00,1000.00,0.00,0.00,0.00,4600.00,0.00,0.00,0,0

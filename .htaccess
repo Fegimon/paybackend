@@ -1,0 +1,129 @@
+#set link auto on
+Options +FollowSymLinks -MultiViews
+DirectoryIndex index.php
+DirectoryIndex index.html
+Options -Indexes
+
+RewriteEngine On
+
+RewriteRule ^(MyAdmin)($|/) - [L]
+RewriteRule ^(payrentz)($|/) - [L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+#RewriteRule ^index\.php$ https://www.payrentz.com/ [R=301,L] 
+#RewriteCond %{HTTP_HOST} !^(.*)\.payrentz\.com$ [NC] 
+#RewriteRule ^(.*)$ https://www.payrentz.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ https://www.payrentz.com/$1/ [R=301,L]
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+
+ErrorDocument 403 https://www.payrentz.com/403.html
+ErrorDocument 404 https://www.payrentz.com/404.html
+
+RewriteRule ^403.html$ 403.php [L]
+RewriteRule ^404.html$ 404.php [L]
+RewriteRule ^common_product_category.html$ common_product_category.php [L]
+
+RewriteRule ^index.html$ index.php [L]
+
+#pages
+RewriteRule ^([^/]*)/$ $1.php
+RewriteRule ^([^/]*)\.html$ $1.php
+
+RewriteRule ^listing/([^/]*)\.html$ listing.php?cat_slug=$1 [QSA,L]
+RewriteRule ^order-details/([^/]*)\.html$ my-order-details.php?id=$1 [QSA,L]
+
+# RewriteRule ^([^/]*).html$ listing.php?cat_slug=$1 [QSA,L]
+
+# RewriteRule ^([^/]*)\.html$ common_startup.php?cp_slug=$1 [QSA,L]
+
+RewriteRule ^start/([^/]*)\.html$ common_startup.php?cp_slug=$1 [QSA,L]
+
+RewriteRule ^product-detail/([^/]*)\.html$ product-detail.php?pro_slug=$1 [QSA,L]
+
+RewriteRule ^product-detail/([^/]*)/([^/]*)/([^/]*)\.html$ product-detail.php?loc_slug=$1&mcat_slug=$2&pro_slug=$3 [QSA,L]
+
+RewriteRule ^category/([^/]*)\.html$ common_product_category.php?cat_slug=$1 [QSA,L]
+
+RewriteRule ^category/([^/]*)/([^/]*)\.html$ common_product_category.php?loc_slug=$1&cat_slug=$2 [QSA,L]
+
+RewriteRule ^productlist/([^/]*)\.html$ listing.php?productlist_slug=$1 [QSA,L]
+
+RewriteRule ^productlist/([^/]*)/([^/]*)/([^/]*)\.html$ listing.php?loc_slug=$1&mcat_slug=$2&productlist_slug=$3 [QSA,L]
+
+RewriteRule ^business/([^/]*)\.html$ business.php?bus_slug=$1 [QSA,L]
+
+RewriteRule ^search-listing/([^/]*)/([^/]*)/([^/]*)/$ search-listing.php?loc_slug=$1&maincat=$2&key=$3 [QSA,L]
+
+RewriteRule ^bearer/([^/]*)\.html$ bearer.php?slug=$1 [QSA,L]
+RewriteRule ^view-testimonial/([^/]*)\.html$ testimonial-landing.php?slug=$1 [QSA,L]
+RewriteRule ^book-details/([^/]*)\.html$ book-details.php?slug=$1 [QSA,L]
+RewriteRule ^whitepapers-details/([^/]*)\.html$ whitepapers-details.php?slug=$1 [QSA,L]
+RewriteRule ^ebook-details/([^/]*)\.html$ ebook-details.php?slug=$1 [QSA,L]
+RewriteRule ^event-details/([^/]*)\.html$ event-details.php?slug=$1 [QSA,L]
+RewriteRule ^events/([^/]*)\.html$ events-detail.php?slug=$1 [QSA,L]
+RewriteRule ^blog-details/([^/]*)\.html$ blog-details.php?slug=$1 [QSA,L]
+RewriteRule ^interview-details/([^/]*)\.html$ interview-landing.php?slug=$1 [QSA,L]
+RewriteRule ^page/([^/]*)\.html$ page.php?slug=$1 [QSA,L]
+RewriteRule ^pages/([^/]*)\.html$ pages.php?slug=$1 [QSA,L]
+
+#IMAGE 
+RewriteRule ^banner/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/banner/$1.$2&w=1440&h=620&zc=0&q=90 [QSA,L]
+
+RewriteRule ^mission/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/mission/$1.$2&w=103&h=103&zc=0&q=90 [QSA,L]
+
+RewriteRule ^productlist/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/product/$1.$2&w=92&h=92&zc=0&q=90 [QSA,L]
+
+RewriteRule ^product/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/product/$1.$2&w=271&h=271&zc=0&q=90 [QSA,L]
+
+RewriteRule ^products/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/product/$1.$2&w=250&h=250&zc=0&q=90 [QSA,L]
+
+RewriteRule ^noimg/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/$1.$2&w=250&h=250&zc=0&q=90 [QSA,L]
+
+RewriteRule ^innerbanner/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/innerbanner/$1.$2&w=1400&h=287&zc=0&q=90 [QSA,L]
+
+RewriteRule ^category/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/category/$1.$2&w=360&h=360&zc=0 [QSA,L]
+
+RewriteRule ^categorys/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/category/$1.$2&w=30&h=30&zc=0 [QSA,L]
+
+
+RewriteRule ^comment/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/comment/$1.$2&w=74&h=74&zc=0 [QSA,L]
+
+RewriteRule ^brands/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/brands/$1.$2&w=153&h=95&zc=0 [QSA,L]
+
+RewriteRule ^location/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/location/$1.$2&w=41&h=41&zc=0 [QSA,L]
+
+RewriteRule ^productmy/image/(.*)\.([jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG]+)$ timthumb.php?src=https://www.payrentz.com/uploads/product/$1.$2&w=114&h=114&zc=0&q=90 [QSA,L]
+
+Redirect 301 /rental-home-appliances.html https://www.payrentz.com/category/chennai/rent-for-home.html
+Redirect 301 /rental-refrigerator-240-double-door.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliances-refrigerator-240l-on-rent.html
+Redirect 301 /rental-refrigerator-190-single-door.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliances-refrigerator-190l-on-rent.html
+Redirect 301 /rental-washing-machine-6-kg-automatic.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliance-washing-machine-6kg-on-rent.html
+Redirect 301 /rental-air-conditioner-1-ton-split-ac.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliances-air-conditioner-1-ton-on-rent.html
+Redirect 301 /rental-air-conditioner-1-5-ton-split-ac.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliances-air-conditioner-1-5-ton-on-rent.html
+Redirect 301 /rental-microwave-20-l-convection.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliances-microwave-20l-on-rentz.html
+Redirect 301 /rental-food-processor.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliances-food-processor-on-rent.html
+Redirect 301 /rental-television-32inch-led-tv.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliances-television-32-inches-on-rent.html
+Redirect 301 /rental-television-40inch-led-tv.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliances-television-40-inches-on-rent.html
+Redirect 301 /rental-home-theatre-5-1-dvd-home-theatre.html https://www.payrentz.com/product-detail/chennai/rent-for-home/appliances-home-theater-on-rent.html
+Redirect 301 /rental-fitness.html https://www.payrentz.com/productlist/chennai/rent-for-home/fitness.html
+Redirect 301 /rental-exercise-bike-fitness-upright-bike.html https://www.payrentz.com/product-detail/chennai/rent-for-home/fitness-upright-bike-on-rent.html
+Redirect 301 /rental-cycle-hybrid-montra.html https://www.payrentz.com/product-detail/chennai/rent-for-home/fitness-cycle-montra-on-rent.html
+Redirect 301 /rental-cycle-hybrid-schwinn.html https://www.payrentz.com/product-detail/chennai/rent-for-home/fitness-cycle-hybrid-on-rent.html
+Redirect 301 /rental-cycle-cannondale.html https://www.payrentz.com/product-detail/chennai/rent-for-home/fitness-cycle-cannondale-on-rent.html
+Redirect 301 /rental-furniture.html https://www.payrentz.com/productlist/chennai/rent-for-home/furniture.html
+
+AddType text/css cssgz
+AddType text/javascript jsgz
+AddEncoding x-gzip .cssgz .jsgz
+# for all files in min directory
+FileETag None
+#set link start https://www.payrentz.com/

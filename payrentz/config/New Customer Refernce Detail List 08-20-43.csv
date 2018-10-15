@@ -1,0 +1,10 @@
+id,enquiry_id,customer_id,name,email,mobile,address,state,city,zone,area
+133,ENQ000197,,,,,,0,0,0,0
+134,ENQ000197,,,,,,0,0,0,0
+145,ENQ000201,,"Prasant Panda",prasantpanda.85@gmail.com,7200712632,"Chennai
+",0,0,0,0
+146,ENQ000201,,aaa,prasantpanda.85@gmail.com,7200712632,Chennai,0,0,0,0
+225,ENQ000235,,"Elamparithi A",elamparithiarul@gmail.com,9952578333,"C2D jones Sigiriya, 8th cross, maxworth nagar, pallikaranai, chennai - 600100",0,0,0,0
+226,ENQ000235,,"R Venkat Saravanan",venkatsaravanan90@gmail.com,9944222969,"B09, Radiance shine, Kozhipattur",0,0,0,0
+243,ENQ000243,,Yurena,yurena676@gmail.com,7708902913,"Plot No:13, 1st Street, Sri Ram Nagar, Mudichur Main Road, Tambaram, West Royal Cascade, Chennai- 60",0,0,0,0
+244,ENQ000243,,,,,,0,0,0,0

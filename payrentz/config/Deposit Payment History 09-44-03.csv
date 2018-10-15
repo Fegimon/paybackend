@@ -1,0 +1,2 @@
+id,enquiry_id,customer_id,reiceved_amount,amount_reiceved_on,payment_mode,collected_on,collected_by,deposit_by,deposit_on,reciept_status
+6,ENQ000306,PR1237,500.00,2018-08-22,1,2018-08-22,3,3,2018-08-22,0

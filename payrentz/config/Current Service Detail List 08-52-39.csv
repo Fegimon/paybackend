@@ -1,0 +1,7 @@
+id,enquiry_id,customer_id,product_id,service_applied_date,issue_type,remarks,is_serviced,serviced_by,service_period,service_amount,from_date,to_date,is_waiver,waiver_from_date,waiver_to_date,customer_fd_back,is_paid,received_ammout,payment_mode,colected_on,colected_by,deposit_by,deposit_on
+6,,PR0781,WM1181160WPCT259171835,2017-11-07,asd,asd,0,,0,0.00,,,0,0000-00-00,0000-00-00,,0,0.00,,0000-00-00,,,0000-00-00
+7,,PR0003,WM1002060VICT25D151008,2018-02-15,123,123,0,,0,0.00,,,0,0000-00-00,0000-00-00,,0,0.00,,0000-00-00,,,0000-00-00
+8,,PR1115,WM1241060WPCT276182135,2018-07-03,asd,asd,0,,0,0.00,,,0,0000-00-00,0000-00-00,,0,0.00,,0000-00-00,,,0000-00-00
+9,,PR1021,WM1240060WPCT276182134,2018-07-10,asd,asd,0,,0,0.00,,,0,0000-00-00,0000-00-00,,0,0.00,,0000-00-00,,,0000-00-00
+10,,PR1148,AC1020010LDAE114161107,2018-07-17,asd,asd,0,,0,0.00,,,0,0000-00-00,0000-00-00,,0,0.00,,0000-00-00,,,0000-00-00
+11,,PR1149,WM1239060WPCT266182130,2018-07-17,asd,asd,0,,0,0.00,,,0,0000-00-00,0000-00-00,,0,0.00,,0000-00-00,,,0000-00-00
