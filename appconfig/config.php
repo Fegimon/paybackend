@@ -22,8 +22,8 @@ return array(
 		'db'=>array(
 			'host' => 'localhost',
 			'dbname' => 'payrentz',
-			'username' => 'prentz',
-			'password' => 'pay@#$2018',
+			'username' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 	),

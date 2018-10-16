@@ -1,7 +1,7 @@
 <?php
 require(dirname(__FILE__).'/../../appcore/app-register.php');
 $conn->check_admin();
-backup_tables(HOST,USERNAME,'pay@#$2018',DBNAME);
+backup_tables(HOST,USERNAME,'',DBNAME);
 /* backup the db OR just a table */
 function backup_tables($host,$user,$pass,$name,$tables = '*')
 {

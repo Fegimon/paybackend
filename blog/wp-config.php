@@ -48,13 +48,13 @@ define('DB_NAME', 'payrentz');
 
 /** MySQL database username */
 
-define('DB_USER', 'prentz');
+define('DB_USER', 'root');
 
 
 
 /** MySQL database password */
 
-define('DB_PASSWORD', 'pay@#$2018');
+define('DB_PASSWORD', '');
 
 
 

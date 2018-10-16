@@ -1,7 +1,7 @@
 <?php
 $today = date('h-i-s');
 $db_name = "paytrentz1";
-	$conn = mysqli_connect("localhost", "payadmin159", "payadmin159", $db_name);
+	$conn = mysqli_connect("localhost", "root", "", $db_name);
 $table = 'customer_general_detail';
 
 $querys = "SELECT  r.year,`customer_type_id` , `customer_status` , doj,  `closed_on` , a.customer_id,  `customer_name` ,  `age` , `dob` ,  `nativity` , gender, `marital_status`, `floor`, `area_id`, `zone_id`, `city_id`, `state_id`, pincode, done_by, r.product_id FROM  `customer_general_detail` AS a INNER JOIN rent_history as r on r.customer_id = a.customer_id  group by a.customer_id,r.year,r.product_id ";

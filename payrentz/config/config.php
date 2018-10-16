@@ -14,8 +14,8 @@ define('DB_HOST', 'localhost');
 //define('DB_NAME', 'payrentz');
 
 //live
-define('DB_USER', 'payadmin159');
-define('DB_PASS', 'payadmin159');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 define('DB_NAME', 'paytrentz1');
 
 

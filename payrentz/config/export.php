@@ -1,6 +1,6 @@
 <?php
 	$db_name="paytrentz1";
-	$conn = mysqli_connect("localhost", "payadmin159", "payadmin159", $db_name);
+	$conn = mysqli_connect("localhost", "root", "", $db_name);
 	//mysqli_select_db("payrentz",$conn);
 	@$stat = $_POST['stat'];
 	@$page = $_POST['page'];

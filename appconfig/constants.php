@@ -24,9 +24,9 @@ define('DBNAME', $App->components->db->dbname);
 
 define('HOST','localhost');
 
-define('USERNAME','prentz');
+define('USERNAME','root');
 
-define('PASS','pay@#$2018');
+define('PASS','');
 
 /*
 define('SMSENABLE', $conn->stripval($EXTRA_ARG['smsenable']));
